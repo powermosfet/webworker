@@ -10,11 +10,11 @@
     var counter = 0;
     
     var worker = new Worker('worker.js');
-    worker.onmessage(function() {
+    worker.onmessage = function() {
       counter--;
       console.log("Main thread received message. Counter is now " + counter);
       updateCounter();
-    });
+    }
     
     function addWorker() {
       counter++;

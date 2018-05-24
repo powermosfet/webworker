@@ -6,10 +6,29 @@
 </head>
 
 <body>
+  <script>
+    var counter = 0;
+    
+    function addWorker() {
+      counter++;
+      updateCounter();
+    }
+    
+    function workerDone() {
+      counter--;
+      updateCounter();
+    }
+    
+    function updateCounter() {
+      var span = document.getElementById("counter");
+      span.innerHTML = counter;
+    }
+  </script>
+  
   <h1>WebWorker</h1>
   <p>
-    <button>Create worker</button>
-    <p>You have <span>0</span> active workers</p>
+    <button onClick="addWorker">Create worker</button>
+    <p>You have <span id="counter">0</span> active workers</p>
   </p>
 </body>
 

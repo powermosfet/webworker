@@ -16,7 +16,7 @@
       updateCounter();
     }
     
-    function addWorker() {
+    function addMessage() {
       counter++;
       console.log("posting a message from the main thread. Counter is " + counter);
       worker.postMessage(counter);
@@ -31,7 +31,7 @@
   
   <h1>WebWorker</h1>
   <p>
-    <button onClick="addWorker()">Create worker</button>
+    <button onClick="addMessage()">Post message</button>
     <p>Your worker has <span id="counter">0</span> messages in the queue</p>
   </p>
 </body>

@@ -19,7 +19,7 @@
     function addWorker() {
       counter++;
       console.log("posting a message from the main thread. Counter is " + counter);
-      worker.postMessage("Boo");
+      worker.postMessage(counter);
       updateCounter();
     }
     

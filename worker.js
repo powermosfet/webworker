@@ -1,5 +1,5 @@
 onmessage = function(msg) {
-  var x = Number(new Date()) + 10000;
+  var x = Number(new Date()) + 3000;
   
   console.log("Worker received message with count " + msg.data);
   

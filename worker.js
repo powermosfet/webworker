@@ -9,3 +9,7 @@ onmessage = function(msg) {
   console.log("Worker is done processing message #" + msg.data + "! posting message to main thread");
   postMessage("Done!");
 }
+
+window.onkeypress = function(e) {
+  postMessage("Key pressed: " + e.which);
+}

@@ -1,5 +1,5 @@
 onmessage = function(msg) {
-  var x = Number(new Date()) + 3000;
+  var x = Number(new Date()) + 5000;
   
   console.log("Worker received message #" + msg.data);
   
@@ -8,8 +8,4 @@ onmessage = function(msg) {
   
   console.log("Worker is done processing message #" + msg.data + "! posting message to main thread");
   postMessage("Done!");
-}
-
-window.onkeypress = function(e) {
-  postMessage("Key pressed: " + e.which);
 }
